@@ -34,6 +34,14 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //listArray = @[@"horse", @"sheep", @"cat", @"dog", @"pig"];
+    self.listArray = [[NSMutableArray alloc] initWithObjects:
+                             @"Horse", @"Sheep", @"Pig", @"Dog",
+                             @"Cat", @"Chicken", @"Duck", @"Goose",
+                             @"Tree", @"Flower", @"Grass", @"Fence",
+                             @"House", @"Table", @"Chair", @"Book",
+                             @"Swing", nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,24 +54,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [listArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSUInteger row = [indexPath row];
+    NSString *identifier = nil;
+    if (row%2 == 0) {
+        identifier = @"GreenIdentifier";
+    }else
+        identifier = @"RedIdentifier";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    UILabel *cellLabel = (UILabel *)[cell viewWithTag:1];
+    cellLabel.text = [listArray objectAtIndex:row];
     
     return cell;
 }

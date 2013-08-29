@@ -25,6 +25,7 @@
 		649C2E491781AD3C00EF005B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 649C2E471781AD3C00EF005B /* InfoPlist.strings */; };
 		649C2E4C1781AD3C00EF005B /* HelloWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C2E4B1781AD3C00EF005B /* HelloWorldTests.m */; };
 		649C2E571781B3B000EF005B /* DateAndTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C2E561781B3B000EF005B /* DateAndTimeViewController.m */; };
+		64B9060217C1262200E64EF2 /* ListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B9060117C1262200E64EF2 /* ListEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		649C2E4B1781AD3C00EF005B /* HelloWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldTests.m; sourceTree = "<group>"; };
 		649C2E551781B3B000EF005B /* DateAndTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateAndTimeViewController.h; sourceTree = "<group>"; };
 		649C2E561781B3B000EF005B /* DateAndTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateAndTimeViewController.m; sourceTree = "<group>"; };
+		64B9060017C1262200E64EF2 /* ListEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListEditViewController.h; sourceTree = "<group>"; };
+		64B9060117C1262200E64EF2 /* ListEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				649C2E561781B3B000EF005B /* DateAndTimeViewController.m */,
 				649C1D99178719D700818112 /* ListViewController.h */,
 				649C1D9A178719D700818112 /* ListViewController.m */,
+				64B9060017C1262200E64EF2 /* ListEditViewController.h */,
+				64B9060117C1262200E64EF2 /* ListEditViewController.m */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				649C2E371781AD3C00EF005B /* ViewController.m in Sources */,
 				649C2E571781B3B000EF005B /* DateAndTimeViewController.m in Sources */,
 				649C1D9B178719D700818112 /* ListViewController.m in Sources */,
+				64B9060217C1262200E64EF2 /* ListEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
