@@ -31,9 +31,12 @@
                         <state key="normal" title="Button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="clickBtn:" destination="7GJ-P5-y1D" eventType="touchUpInside" id="5z7-iE-HTI"/>
+                        </connections>
                     </button>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             </view>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -41,13 +44,13 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
-                <outlet property="button" destination="22p-fh-TuL" id="dUB-yZ-c5J"/>
+                <outlet property="button" destination="22p-fh-TuL" id="GlF-qD-JNE"/>
                 <outlet property="label" destination="r8A-o7-WNm" id="f9b-2M-sju"/>
             </connections>
         </viewController>
         <customObject id="cHN-Vz-3ex" customClass="AppDelegate">
             <connections>
-                <outlet property="viewController" destination="7GJ-P5-y1D" id="5jR-1g-c9X"/>
+                <outlet property="viewController" destination="7GJ-P5-y1D" id="mid-pM-XIG"/>
             </connections>
         </customObject>
     </objects>

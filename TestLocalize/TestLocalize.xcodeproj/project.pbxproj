@@ -51,8 +51,7 @@
 		6416A743187951350074121F /* TestLocalizeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestLocalizeTests-Info.plist"; sourceTree = "<group>"; };
 		6416A745187951350074121F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6416A747187951350074121F /* TestLocalizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLocalizeTests.m; sourceTree = "<group>"; };
-		6440307018799CAF00B9245E /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		6440307218799CB100B9245E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/MainWindow.xib"; sourceTree = "<group>"; };
+		6440307018799CAF00B9245E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		64D261B018798FD100CA3EB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		64D261B11879913600CA3EB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		64D261B5187994AD00CA3EB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -304,7 +303,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				6440307018799CAF00B9245E /* en */,
-				6440307218799CB100B9245E /* zh-Hans */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";

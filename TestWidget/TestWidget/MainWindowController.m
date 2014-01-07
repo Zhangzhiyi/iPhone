@@ -9,7 +9,7 @@
 #import "MainWindowController.h"
 
 @interface MainWindowController ()
-
+@property (strong, nonatomic) IBOutlet UIButton *button;
 @end
 
 @implementation MainWindowController
@@ -27,8 +27,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.button setTitle:@"123" forState:UIControlStateNormal];
 }
 
+- (IBAction)clickBtn:(id)sender
+{
+    NSLog(@"click!");
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

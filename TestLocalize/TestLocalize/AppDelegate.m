@@ -19,6 +19,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = self.viewController;
+    CGRect rect = self.viewController.view.frame;
     [self.window makeKeyAndVisible];
     return YES;
 }

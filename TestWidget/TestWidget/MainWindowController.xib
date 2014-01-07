@@ -6,7 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainWindowController">
             <connections>
-                <outlet property="view" destination="1" id="3"/>
+                <outlet property="button" destination="Lem-mC-fZ7" id="OTd-Kv-Jpt"/>
+                <outlet property="view" destination="1" id="ue3-cY-X7n"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,6 +21,9 @@
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="clickBtn:" destination="-1" eventType="touchUpInside" id="OfZ-9W-67c"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

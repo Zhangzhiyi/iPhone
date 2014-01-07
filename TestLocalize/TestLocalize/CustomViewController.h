@@ -10,4 +10,5 @@
 
 @interface CustomViewController : UIViewController
 
+- (IBAction)clickBtn:(id)sender;
 @end

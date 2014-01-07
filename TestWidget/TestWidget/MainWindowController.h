@@ -10,4 +10,5 @@
 
 @interface MainWindowController : UIViewController
 
+- (IBAction)clickBtn:(id)sender;
 @end

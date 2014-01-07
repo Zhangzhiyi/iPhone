@@ -34,6 +34,10 @@
     [self.button setTitle:btnName forState:UIControlStateNormal];
 }
 
+- (IBAction)clickBtn:(id)sender
+{
+    NSLog(@"click!");
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
