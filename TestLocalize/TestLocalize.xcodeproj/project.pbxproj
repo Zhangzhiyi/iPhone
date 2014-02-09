@@ -22,6 +22,8 @@
 		6440306F18799CAF00B9245E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6440307118799CAF00B9245E /* MainWindow.xib */; };
 		64D261B4187994AD00CA3EB1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64D261B6187994AD00CA3EB1 /* Localizable.strings */; };
 		64D261BA1879950A00CA3EB1 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D261B91879950A00CA3EB1 /* CustomViewController.m */; };
+		64D9FC7B18A736A80062CE96 /* english.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D9FC7918A736A80062CE96 /* english.png */; };
+		64D9FC7C18A736A80062CE96 /* china.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D9FC7A18A736A80062CE96 /* china.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		64D261B7187994B400CA3EB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		64D261B81879950A00CA3EB1 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		64D261B91879950A00CA3EB1 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		64D9FC7918A736A80062CE96 /* english.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = english.png; sourceTree = "<group>"; };
+		64D9FC7A18A736A80062CE96 /* china.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = china.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 		6416A729187951350074121F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				64D9FC7918A736A80062CE96 /* english.png */,
+				64D9FC7A18A736A80062CE96 /* china.png */,
 				6416A72A187951350074121F /* TestLocalize-Info.plist */,
 				6416A72B187951350074121F /* InfoPlist.strings */,
 				6416A72E187951350074121F /* main.m */,
@@ -234,8 +240,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D9FC7B18A736A80062CE96 /* english.png in Resources */,
 				6440306F18799CAF00B9245E /* MainWindow.xib in Resources */,
 				6416A72D187951350074121F /* InfoPlist.strings in Resources */,
+				64D9FC7C18A736A80062CE96 /* china.png in Resources */,
 				64D261B4187994AD00CA3EB1 /* Localizable.strings in Resources */,
 				6416A735187951350074121F /* Images.xcassets in Resources */,
 			);

@@ -22,25 +22,46 @@
 {
     // Override point for customization after application launch.
     NSLog(@"didFinishLaunchingWithOptions");
+    if (launchOptions) {
+        //本地通知相关：
+        UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+        if (localNotif) {
+            NSString *value = [localNotif.userInfo objectForKey:@"key"];
+            if (value) {
+                NSLog(@"local notification:%@", value);
+            }
+        }
+        //远程通知相关：当不在前台或者后台运行的时候，点击远程通知启动app，以下代码可以获取远程通知的消息
+        //这里注意远程通知是没有UIRemoteNotification类的，取出来是字典NSDictionary
+        NSDictionary *remoteNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        if (remoteNotif) {
+            NSString *alert = [[remoteNotif objectForKey:@"aps"] objectForKey:@"alert"];
+            NSString *name = [remoteNotif objectForKey:@"name"];
+            NSLog(@"alert: %@,  name:%@", alert, name);
+        }
+    }
     [BPush setupChannel:launchOptions];
     [BPush setDelegate:self];
     
     [application setApplicationIconBadgeNumber:0];
-    [application registerForRemoteNotificationTypes:
-     UIRemoteNotificationTypeAlert
-     | UIRemoteNotificationTypeBadge
-     | UIRemoteNotificationTypeSound];
-
+    //注册通知。如果你的应用之前已经注册了，那么调用registerForRemoteNotificationTypes的时候didRegisterForRemoteNotificationsWithDeviceToken会立即返回设备的令牌，不会造成额外的负载
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert| UIRemoteNotificationTypeBadge| UIRemoteNotificationTypeSound];
+    
     return YES;
 }
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-    NSLog(@"didRegisterForRemoteNotificationsWithDeviceToken");
+    NSLog(@"didRegisterForRemoteNotificationsWithDeviceToken:%@", deviceToken);
     [BPush registerDeviceToken:deviceToken];
     [BPush bindChannel];
 }
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    NSLog(@"Receive Notify: %@", [userInfo debugDescription]);
+    //当前在前台运行的时候，如果接收到推送通知会直接调用此方法;如果不在前台运行而在后台，接收到推送通知要点击推送通知启动前台应用会运行此方法;如果当前不在前台运行也不在后台运行，点击通知消息启动app,在didFinishLaunchingWithOptions可以获取到远程通知的消息体
+     
+     
+     /*可以根据在iOS上，你可以通过确定应用程序的状态来确定是否是应用程序由于用户点击了动作按钮而启动，或通知被提交给已经运行的应用。通过委托实现application:didReceiveRemoteNotification:或 application:didReceiveLocalNotification:方法，获取应用程序的 applicationState 属性值并判定它。如果值为 UIApplicationStateInactive,表明用户单击了动作按钮。如果值为 UIApplicationStateActive,表明应用收到此通知的时候已经运行在前台。**/
+    NSLog(@"didReceiveRemoteNotification: %@", [userInfo debugDescription]);
+    NSLog(@"name:%@", [userInfo objectForKey:@"name"]);
     NSString *alert = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
     if (application.applicationState == UIApplicationStateActive) {
         // Nothing to do if applicationState is Inactive, the iOS already displayed an alert view.
@@ -56,9 +77,16 @@
     [BPush handleNotification:userInfo];
     
 }
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    NSLog(@"didReceiveLocalNotification");
+    NSString *alert = notification.alertBody;
+    NSString *value = [notification.userInfo objectForKey:@"key"];
+    NSLog(@"alert:%@, value:%@", alert, value);
+}
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
-    NSLog(@"Failed to get token, error: %@", error);
+    NSLog(@"didFailToRegisterForRemoteNotificationsWithError: %@", error);
 }
 - (void) onMethod:(NSString*)method response:(NSDictionary*)data {
     NSLog(@"On method:%@", method);
@@ -108,7 +136,6 @@
         
         // Background tasks require you to use asyncrous tasks
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //Perform your tasks that your application requires
         NSLog(@"time remain:%f", application.backgroundTimeRemaining);
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -117,17 +144,14 @@
 //                sleep(1);
 //            }
             //application.backgroundTimeRemaining > 1.0f
-            while (true) {
-                NSLog(@"time remain:%f", application.backgroundTimeRemaining);
+            while (application.backgroundTimeRemaining) {
+                //NSLog(@"time remain:%f", application.backgroundTimeRemaining);
                 sleep(1);
             }
             if (self.background_task != UIBackgroundTaskInvalid) {
                 [[UIApplication sharedApplication] endBackgroundTask:self.background_task];
                 self.background_task = UIBackgroundTaskInvalid;
             }
-        });
-        //[application endBackgroundTask: background_task]; //End the task so the system knows that you are done with what you need to perform
-        //background_task = UIBackgroundTaskInvalid; //Invalidate the background_task
         });
     }
 }
@@ -138,7 +162,8 @@
     NSLog(@"applicationWillEnterForeground");
     if (self.background_task != UIBackgroundTaskInvalid)
     {
-        [self background_task];
+        [[UIApplication sharedApplication] endBackgroundTask:self.background_task];
+        self.background_task = UIBackgroundTaskInvalid;
     }
 }
 
