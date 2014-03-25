@@ -32,11 +32,16 @@
     self.label.text = NSLocalizedString(@"label", nil);
     NSString *btnName =NSLocalizedString(@"btnName", nil);
     [self.button setTitle:btnName forState:UIControlStateNormal];
+    
+    NSString *platform = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"platform"];
+    NSLog(@"platform:%@", platform);
 }
 
 - (IBAction)clickBtn:(id)sender
 {
     NSLog(@"click!");
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"错误" message:@"测试" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alertView show];
 }
 - (void)didReceiveMemoryWarning
 {

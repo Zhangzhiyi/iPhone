@@ -10,7 +10,6 @@
 		6416A723187951350074121F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6416A722187951350074121F /* Foundation.framework */; };
 		6416A725187951350074121F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6416A724187951350074121F /* CoreGraphics.framework */; };
 		6416A727187951350074121F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6416A726187951350074121F /* UIKit.framework */; };
-		6416A72D187951350074121F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6416A72B187951350074121F /* InfoPlist.strings */; };
 		6416A72F187951350074121F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416A72E187951350074121F /* main.m */; };
 		6416A733187951350074121F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416A732187951350074121F /* AppDelegate.m */; };
 		6416A735187951350074121F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6416A734187951350074121F /* Images.xcassets */; };
@@ -20,10 +19,9 @@
 		6416A746187951350074121F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6416A744187951350074121F /* InfoPlist.strings */; };
 		6416A748187951350074121F /* TestLocalizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416A747187951350074121F /* TestLocalizeTests.m */; };
 		6440306F18799CAF00B9245E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6440307118799CAF00B9245E /* MainWindow.xib */; };
-		64D261B4187994AD00CA3EB1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64D261B6187994AD00CA3EB1 /* Localizable.strings */; };
+		64B5314718D055A4007F04DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6416A72B187951350074121F /* InfoPlist.strings */; };
+		64B5314E18D066FD007F04DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64D261B6187994AD00CA3EB1 /* Localizable.strings */; };
 		64D261BA1879950A00CA3EB1 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D261B91879950A00CA3EB1 /* CustomViewController.m */; };
-		64D9FC7B18A736A80062CE96 /* english.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D9FC7918A736A80062CE96 /* english.png */; };
-		64D9FC7C18A736A80062CE96 /* china.png in Resources */ = {isa = PBXBuildFile; fileRef = 64D9FC7A18A736A80062CE96 /* china.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6403745318DFC9CF00A8F460 /* TestLocalize-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestLocalize-Info.plist"; sourceTree = "<group>"; };
 		6416A71F187951350074121F /* TestLocalize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLocalize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6416A722187951350074121F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6416A724187951350074121F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6416A726187951350074121F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6416A72A187951350074121F /* TestLocalize-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestLocalize-Info.plist"; sourceTree = "<group>"; };
 		6416A72C187951350074121F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6416A72E187951350074121F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6416A730187951350074121F /* TestLocalize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestLocalize-Prefix.pch"; sourceTree = "<group>"; };
@@ -54,14 +52,12 @@
 		6416A745187951350074121F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6416A747187951350074121F /* TestLocalizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLocalizeTests.m; sourceTree = "<group>"; };
 		6440307018799CAF00B9245E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		64B5314518D05206007F04DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64D261B018798FD100CA3EB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		64D261B11879913600CA3EB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		64D261B5187994AD00CA3EB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64D261B7187994B400CA3EB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		64D261B81879950A00CA3EB1 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		64D261B91879950A00CA3EB1 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
-		64D9FC7918A736A80062CE96 /* english.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = english.png; sourceTree = "<group>"; };
-		64D9FC7A18A736A80062CE96 /* china.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = china.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,9 +132,7 @@
 		6416A729187951350074121F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				64D9FC7918A736A80062CE96 /* english.png */,
-				64D9FC7A18A736A80062CE96 /* china.png */,
-				6416A72A187951350074121F /* TestLocalize-Info.plist */,
+				6403745318DFC9CF00A8F460 /* TestLocalize-Info.plist */,
 				6416A72B187951350074121F /* InfoPlist.strings */,
 				6416A72E187951350074121F /* main.m */,
 				6416A730187951350074121F /* TestLocalize-Prefix.pch */,
@@ -171,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6416A74B187951350074121F /* Build configuration list for PBXNativeTarget "TestLocalize" */;
 			buildPhases = (
+				6403746718E127C200A8F460 /* ShellScript */,
 				6416A71B187951350074121F /* Sources */,
 				6416A71C187951350074121F /* Frameworks */,
 				6416A71D187951350074121F /* Resources */,
+				6403746818E1487E00A8F460 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -211,6 +207,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = zhangzhiyi;
 				TargetAttributes = {
+					6416A71E187951350074121F = {
+						DevelopmentTeam = 7T9FVP7WY3;
+					};
 					6416A739187951350074121F = {
 						TestTargetID = 6416A71E187951350074121F;
 					};
@@ -240,12 +239,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64D9FC7B18A736A80062CE96 /* english.png in Resources */,
+				64B5314E18D066FD007F04DE /* Localizable.strings in Resources */,
 				6440306F18799CAF00B9245E /* MainWindow.xib in Resources */,
-				6416A72D187951350074121F /* InfoPlist.strings in Resources */,
-				64D9FC7C18A736A80062CE96 /* china.png in Resources */,
-				64D261B4187994AD00CA3EB1 /* Localizable.strings in Resources */,
 				6416A735187951350074121F /* Images.xcassets in Resources */,
+				64B5314718D055A4007F04DE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +255,35 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6403746718E127C200A8F460 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"---------Run Script Start---------------\"\necho ${PROJECT_DIR}\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n#/usr/libexec/PlistBuddy -c \"set CFBundleShortVersionString 0.3\" ${plist}\nif [ $CONFIGURATION == Release ]; then\necho \"Bumping build number...\"\n\n# increment the build number (ie 115 to 116)\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\nif [[ \"${buildnum}\" == \"\" ]]; then\necho \"No build number in $plist\"\nexit 2\nfi\n\nbuildnum=$(expr $buildnum + 1)\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\necho \"Bumped build number to $buildnum\"\n\nelse\necho $CONFIGURATION \" build - Not bumping build number.\"\nfi\n";
+		};
+		6403746818E1487E00A8F460 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"---------Run Script End---------------\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6416A71B187951350074121F /* Sources */ = {
@@ -318,8 +344,8 @@
 		64D261B6187994AD00CA3EB1 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				64D261B5187994AD00CA3EB1 /* en */,
 				64D261B7187994B400CA3EB1 /* zh-Hans */,
+				64B5314518D05206007F04DE /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -350,6 +376,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"PROXY_PLATFORM=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -405,10 +432,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestLocalize/TestLocalize-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "TestLocalize/TestLocalize-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,10 +451,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestLocalize/TestLocalize-Prefix.pch";
 				INFOPLIST_FILE = "TestLocalize/TestLocalize-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
